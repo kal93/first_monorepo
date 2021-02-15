@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Widget } from '@fem/api-interfaces';
+import { WidgetsService } from '@fem/core-data';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'production-nx-angular-widgets',
@@ -8,7 +10,10 @@ import { Widget } from '@fem/api-interfaces';
 })
 export class WidgetsComponent implements OnInit {
   widgets: Widget[];
+  widgets$: Observable<Widget[]>;
   selectedWidget: Widget;
+
+  constructor(private widgetsService:WidgetsService) {}
 
   ngOnInit(): void {
     this.reset();
@@ -32,7 +37,7 @@ export class WidgetsComponent implements OnInit {
   }
 
   loadWidgets() {
-    this.widgets = [];
+    this.widgets$ = this.widgetsService.all();
   }
 
   saveWidget(widget: Widget) {
@@ -44,20 +49,25 @@ export class WidgetsComponent implements OnInit {
   }
 
   createWidget(widget: Widget) {
-    const newWidget = Object.assign({}, widget, { id: this.getRandomID()})
-    this.widgets = [...this.widgets, newWidget];
-    this.resetForm();
-  }
-
-  updateWidget(widget: Widget) {
-    this.widgets = this.widgets.map(w => {
-      return (widget.id === w.id) ? widget : w;
+    // const newWidget = Object.assign({}, widget, { id: this.getRandomID()})
+    // this.widgets = [...this.widgets, newWidget];
+    this.widgetsService.create(widget).subscribe((resp) => {
+      console.log(resp);
     });
     this.resetForm();
   }
 
+  updateWidget(widget: Widget) {
+    // this.widgets = this.widgets.map(w => {
+    //   return (widget.id === w.id) ? widget : w;
+    // });
+    this.widgetsService.update(widget);
+    this.resetForm();
+  }
+
   deleteWidget(widget: Widget) {
-    this.widgets = this.widgets.filter(w => widget.id !== w.id);
+    // this.widgets = this.widgets.filter(w => widget.id !== w.id);
+    this.widgetsService.delete(widget);
     this.resetForm();
   }
 

@@ -1,6 +1,6 @@
 <div class="component-container">
     <div class="list-component">
-      <production-nx-angular-widgets-list [widgets]="widgets"
+      <production-nx-angular-widgets-list [widgets]="widgets$ | async"
         (selected)="selectWidget($event)"
         (deleted)="deleteWidget($event)">
       </production-nx-angular-widgets-list>
