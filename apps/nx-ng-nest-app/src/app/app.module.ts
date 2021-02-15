@@ -13,7 +13,7 @@ import {
 } from '@production-nx-angular/material';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { RouttingModule } from './routting.module';
+import { RoutingModule } from './routting.module';
 import { WidgetDetailsComponent } from './widgets/widget-details/widget-details.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
 import { WidgetsComponent } from './widgets/widgets.component';
@@ -34,7 +34,7 @@ import { WidgetsComponent } from './widgets/widgets.component';
     CoreStateModule,
     HttpClientModule,
     MaterialModule,
-    RouttingModule,
+    RoutingModule,
     // StoreModule.forRoot({}, {}),
   ],
   providers: [],
