@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Widget } from '@fem/api-interfaces';
+import { WidgetsService } from '@fem/core-data';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'production-nx-angular-widgets',
@@ -8,7 +10,10 @@ import { Widget } from '@fem/api-interfaces';
 })
 export class WidgetsComponent implements OnInit {
   widgets: Widget[];
+  widgets$: Observable<Widget[]>;
   selectedWidget: Widget;
+
+  constructor(private widgetsService:WidgetsService) {}
 
   ngOnInit(): void {
     this.reset();
@@ -32,7 +37,7 @@ export class WidgetsComponent implements OnInit {
   }
 
   loadWidgets() {
-    this.widgets = [];
+    this.widgets$ = this.widgetsService.all();
   }
 
   saveWidget(widget: Widget) {
