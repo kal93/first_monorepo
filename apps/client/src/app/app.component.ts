@@ -17,4 +17,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.widgets$ = this.widgetsService.all();
   }
+
+  toggleSidenav() {
+    console.log('lol...');
+  }
 }
