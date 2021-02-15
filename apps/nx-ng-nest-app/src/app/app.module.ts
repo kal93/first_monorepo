@@ -1,38 +1,46 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StoreModule } from '@ngrx/store';
 import {
-  CoreDataModule,
-  coreDataRoutes,
-} from '@production-nx-angular/core-data';
+  CoreDataModule
+} from '@fem/core-data';
 import {
-  CoreStateModule,
-  coreStateRoutes,
-} from '@production-nx-angular/core-state';
+  CoreStateModule
+} from '@fem/core-state';
 import {
-  MaterialModule,
-  materialRoutes,
-} from '@production-nx-angular/material';
-import { RouttingModule } from './routting.module';
-import { WidgetsComponent } from './widgets/widgets.component';
+  MaterialModule
+} from '@fem/material';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { RoutingModule } from './routting.module';
+import { WidgetDetailsComponent } from './widgets/widget-details/widget-details.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
-import { WidgetDetailsComponent } from './widget-details/widget-details.component';
+import { WidgetsComponent } from './widgets/widgets.component';
+
 
 @NgModule({
-  declarations: [AppComponent, WidgetsComponent, WidgetsListComponent, WidgetDetailsComponent],
+  declarations: [
+    AppComponent, 
+    HomeComponent,
+    WidgetDetailsComponent, 
+    WidgetsComponent,
+    WidgetsListComponent, 
+  ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {}),
+    BrowserModule,
+    CommonModule,
     CoreDataModule,
     CoreStateModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     MaterialModule,
-    RouttingModule,
+    RoutingModule,
+    // StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent],

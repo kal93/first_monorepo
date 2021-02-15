@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Widget } from '@fem/api-interfaces';
 
 @Component({
   selector: 'production-nx-angular-widgets-list',
   templateUrl: './widgets-list.component.html',
   styleUrls: ['./widgets-list.component.scss']
 })
-export class WidgetsListComponent implements OnInit {
+export class WidgetsListComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() widgets: Widget[];
+  @Input() readonly = false;
+  @Output() selected = new EventEmitter();
+  @Output() deleted = new EventEmitter();
 
 }
