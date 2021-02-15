@@ -3,5 +3,8 @@ module.exports = {
     '<rootDir>/apps/nx-ng-nest-app',
     '<rootDir>/apps/api',
     '<rootDir>/libs/api-interfaces',
+    '<rootDir>/libs/core-data',
+    '<rootDir>/libs/core-state',
+    '<rootDir>/libs/material',
   ],
 };

@@ -18,7 +18,10 @@
     "paths": {
       "@production-nx-angular/api-interfaces": [
         "libs/api-interfaces/src/index.ts"
-      ]
+      ],
+      "@production-nx-angular/core-data": ["libs/core-data/src/index.ts"],
+      "@production-nx-angular/core-state": ["libs/core-state/src/index.ts"],
+      "@production-nx-angular/material": ["libs/material/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
