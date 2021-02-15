@@ -13,6 +13,7 @@ import {
 import {
   MaterialModule
 } from '@fem/material';
+import { UiToolbarModule } from '@fem/ui-toolbar';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './routting.module';
@@ -27,7 +28,7 @@ import { WidgetsComponent } from './widgets/widgets.component';
     HomeComponent,
     WidgetDetailsComponent, 
     WidgetsComponent,
-    WidgetsListComponent, 
+    WidgetsListComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -40,6 +41,7 @@ import { WidgetsComponent } from './widgets/widgets.component';
     HttpClientModule,
     MaterialModule,
     RoutingModule,
+    UiToolbarModule
     // StoreModule.forRoot({}, {}),
   ],
   providers: [],

@@ -1,14 +1,14 @@
 
-<mat-toolbar
-
-(click)="toggleSidenav()">
-</mat-toolbar>
+<production-nx-angular-toolbar
+(toggleSidenav)="toggleSidenav()"
+> Loading toolbar...
+</production-nx-angular-toolbar>
 
 <mat-sidenav-container>
 <mat-sidenav #sidenav [opened]="true" mode="side" class="app-sidenav">
   <ng-container>
     <span class="logo">
-      <img src="assets/logo.png" alt="Logo" />
+      <img src="assets/logo.jpeg" alt="Logo" />
     </span>
     <mat-divider></mat-divider>
     <mat-nav-list>
@@ -28,7 +28,7 @@
       <mat-card-title>{{widget.title}}</mat-card-title>
       <mat-card-subtitle>This is a widget.</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="https://media.giphy.com/media/WUTywPPYZpdDChyBaZ/giphy.gif" alt="Learn to Love Coding">
+    <!-- <img mat-card-image src="https://media.giphy.com/media/WUTywPPYZpdDChyBaZ/giphy.gif" alt="Learn to Love Coding"> -->
     <mat-card-content>
       <h3>Description</h3>
       <p>{{widget.description}}</p>
