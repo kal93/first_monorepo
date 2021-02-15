@@ -6,7 +6,7 @@
       </production-nx-angular-widgets-list>
     </div>
     <div class="details-component">
-      <production-nx-angular-widget-details [widget]="selectedWidget"
+      <production-nx-angular-widget-details [widget]="selectedWidget$ | async"
         (saved)="saveWidget($event)"
         (cancelled)="resetForm()">
       </production-nx-angular-widget-details>
