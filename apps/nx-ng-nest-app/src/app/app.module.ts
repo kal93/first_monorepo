@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -32,6 +33,8 @@ import { WidgetsComponent } from './widgets/widgets.component';
     BrowserModule,
     CoreDataModule,
     CoreStateModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MaterialModule,
     RoutingModule,
