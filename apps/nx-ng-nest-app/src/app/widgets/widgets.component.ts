@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Widget } from '@production-nx-angular/api-interfaces';
+import { Widget } from '@fem/api-interfaces';
 
 @Component({
   selector: 'production-nx-angular-widgets',

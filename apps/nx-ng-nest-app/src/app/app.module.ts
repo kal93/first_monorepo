@@ -5,13 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   CoreDataModule
-} from '@production-nx-angular/core-data';
+} from '@fem/core-data';
 import {
   CoreStateModule
-} from '@production-nx-angular/core-state';
+} from '@fem/core-state';
 import {
   MaterialModule
-} from '@production-nx-angular/material';
+} from '@fem/material';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './routting.module';
