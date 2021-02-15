@@ -28,7 +28,7 @@ export class WidgetsService {
   }
   ];
 
-  create(createWidgetDto: CreateWidgetDto) {
+  create(widget: Widget) {
     return 'This action adds a new widget';
   }
 
@@ -40,7 +40,7 @@ export class WidgetsService {
     return `This action returns a #${id} widget`;
   }
 
-  update(id: number, updateWidgetDto: UpdateWidgetDto) {
+  update(id: number, widget: Widget) {
     return `This action updates a #${id} widget`;
   }
 
