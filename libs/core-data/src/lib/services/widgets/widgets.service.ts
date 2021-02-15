@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 // import { environment } from 'em';
 import { Widget } from '@fem/api-interfaces';
 
-const API_ENDPOINT = 'http://localhost:3000';
+const API_ENDPOINT = 'http://localhost:3000/';
 
 @Injectable({
   providedIn: 'root',

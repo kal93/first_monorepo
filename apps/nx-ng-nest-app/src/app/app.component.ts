@@ -28,5 +28,7 @@ export class AppComponent implements OnInit {
 
   logout() {}
 
-  toggleSidenav() {}
+  toggleSidenav() {
+    console.log('Toggle...');
+  }
 }
