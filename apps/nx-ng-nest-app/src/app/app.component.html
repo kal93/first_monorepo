@@ -14,7 +14,7 @@
     <mat-nav-list>
       <mat-list-item
         *ngFor="let link of links"
-      >
+      [routerLink]="link.path" routerLinkActive="router-link-active">
         <mat-icon matListIcon>{{ link.icon }}</mat-icon>
         {{ link.title | uppercase }}
       </mat-list-item>
