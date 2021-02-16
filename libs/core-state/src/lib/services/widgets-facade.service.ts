@@ -2,11 +2,10 @@ import { Injectable } from '@angular/core';
 import { Widget } from '@fem/api-interfaces';
 import { WidgetsService } from '@fem/core-data';
 import { Subject } from 'rxjs';
-
 @Injectable({
   providedIn: 'root',
 })
-export class WidgetsFacadeService {
+export class WidgetsFacadeServiceOld {
 
   private allWidgets = new Subject<Widget[]>();
   private selectedWidget = new Subject<Widget>();

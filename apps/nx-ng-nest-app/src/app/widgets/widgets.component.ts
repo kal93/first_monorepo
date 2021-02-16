@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Widget } from '@fem/api-interfaces';
-import { WidgetsFacadeService } from '@fem/core-state';
+import { WidgetsFacade } from '@fem/core-state';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -15,7 +15,7 @@ export class WidgetsComponent implements OnInit {
   widgets$: Observable<Widget[]> = this.widgetFacade.allWidgets$;
   selectedWidget$: Observable<Widget> = this.widgetFacade.selectedWidget$;
 
-  constructor(private widgetFacade: WidgetsFacadeService) {}
+  constructor(private widgetFacade: WidgetsFacade) {}
 
   ngOnInit(): void {
     this.reset();
@@ -43,7 +43,7 @@ export class WidgetsComponent implements OnInit {
   }
 
   loadWidgets() {
-    this.widgetFacade.loadAllWidgets();
+    this.widgetFacade.loadWidgets();
   }
 
   saveWidget(widget: Widget) {

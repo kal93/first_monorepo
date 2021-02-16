@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WidgetsFacadeService } from './widgets-facade.service';
+import { WidgetsFacadeServiceOld } from './widgets-facade.service';
 
-describe('WidgetsFacadeService', () => {
-  let service: WidgetsFacadeService;
+describe('WidgetsFacadeServiceOld', () => {
+  let service: WidgetsFacadeServiceOld;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WidgetsFacadeService);
+    service = TestBed.inject(WidgetsFacadeServiceOld);
   });
 
   it('should be created', () => {
